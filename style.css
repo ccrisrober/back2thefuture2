@@ -1,0 +1,219 @@
+body {
+	background: #000;
+    margin: 0;
+}
+
+.title img {
+	max-width: 100%;
+}
+.outer {
+    display: table;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.middle {
+    display: table-cell;
+    vertical-align: middle;
+    overflow: auto;
+}
+
+.inner {
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+
+.container {
+    width: 100%;
+    overflow: hidden;
+    background: #000 url(img/background.png) repeat-x;
+    height: 237px;
+
+    -webkit-animation: background-anim 10s linear infinite;
+       -moz-animation: background-anim 10s linear infinite;
+        -ms-animation: background-anim 10s linear infinite;
+         -o-animation: background-anim 10s linear infinite;
+            animation: background-anim 10s linear infinite;
+
+}
+#car {
+    position: relative;
+	height: 45px;
+	width: 98px;
+	margin: auto;
+	overflow: hidden;
+    margin-top: 130px;
+}
+#car-body {
+	background: url(img/car.png) no-repeat;
+	width: 100%;
+    height: 100%;
+}
+
+.wheel#front, .wheel#back {
+	background: url(img/wheel.png) no-repeat;
+    float: left;
+    height: 17px;
+    width: 17px;
+    margin-top: -19px;
+
+    -webkit-animation: wheel-anim .5s linear 0s infinite;
+       -moz-animation: wheel-anim .5s linear 0s infinite;
+        -ms-animation: wheel-anim .5s linear 0s infinite;
+         -o-animation: wheel-anim .5s linear 0s infinite;
+            animation: wheel-anim .5s linear 0s infinite;
+
+}
+.wheel#front {
+    margin-left: 19px;
+}
+.wheel#back {    
+	margin-left: 71px;
+}
+#marty {
+    margin: auto;
+    overflow: hidden;
+	width: 33px;
+	height: 49px;
+    position: relative;
+    top: 15%;
+}
+#marty-body {
+	width: 100%;
+    height: 100%;
+	background-image: url(img/marty-complete-anim.png);
+	/*animation: try-fly .6s steps(4);*/
+
+    -webkit-animation: fly .6s steps(3) infinite;
+       -moz-animation: fly .6s steps(3) infinite;
+        -ms-animation: fly .6s steps(3) infinite;
+         -o-animation: fly .6s steps(3) infinite;
+            animation: fly .6s steps(3) infinite;
+}
+@keyframes try-fly {
+  0% { background-position:-99px }
+  100% { background-position:-231px }
+}
+@keyframes fly {
+  0% { background-position:0 }
+  100% { background-position:-99px }
+}
+@-moz-keyframes fly {
+  0% { background-position:0 }
+  100% { background-position:-99px }
+}
+@-webkit-keyframes fly {
+  0% { background-position:0 }
+  100% { background-position:-99px }
+}
+@-ms-keyframes fly {
+  0% { background-position:0 }
+  100% { background-position:-99px }
+}
+@-o-keyframes fly {
+  0% { background-position:0 }
+  100% { background-position:-99px }
+}
+
+
+
+@keyframes wheel-anim {
+	0% {transform: rotate(0deg);}
+	100% {transform: rotate(360deg);}
+}
+@-moz-keyframes wheel-anim {
+	0% {transform: rotate(0deg);}
+	100% {transform: rotate(360deg);}
+}
+@-webkit-keyframes wheel-anim {
+	0% {transform: rotate(0deg);}
+	100% {transform: rotate(360deg);}
+}
+@-ms-keyframes wheel-anim {
+	0% {transform: rotate(0deg);}
+	100% {transform: rotate(360deg);}
+}
+@-o-keyframes wheel-anim {
+	0% {transform: rotate(0deg);}
+	100% {transform: rotate(360deg);}
+}
+
+
+@keyframes background-anim {
+	from {background-position: 1024px 0px;}
+	to {background-position: 0 0;}
+}
+@-moz-keyframes background-anim {
+	from {background-position: 1024px 0px;}
+	to {background-position: 0 0;}
+}
+@-webkit-keyframes background-anim {
+	from {background-position: 1024px 0px;}
+	to {background-position: 0 0;}
+}
+@-ms-keyframes background-anim {
+	from {background-position: 1024px 0px;}
+	to {background-position: 0 0;}
+}
+@-o-keyframes background-anim {
+	from {background-position: 1024px 0px;}
+	to {background-position: 0 0;}
+}
+#title {
+	float: right;
+    margin-right: 2.5%;
+    margin-top: 2.5%;
+    -webkit-animation: fadein 2s;
+       -moz-animation: fadein 2s;
+        -ms-animation: fadein 2s;
+         -o-animation: fadein 2s;
+            animation: fadein 2s;
+}
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+#marty {
+	top: 15%;
+}
+#car {
+    margin-top: 130px;
+}
+
+@media only screen and (max-width: 780px) {
+	#marty {
+		top: 0%;
+	}
+	#car {
+	    margin-top: 18px;
+	}
+	#title {
+		width: 100%;
+    	text-align: center;
+	    float: none;
+	}
+}
+
+@media only screen and (max-width: 380px) {
+	#car {
+	    margin-top: 32px;
+	}
+}
